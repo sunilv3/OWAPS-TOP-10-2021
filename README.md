@@ -6,15 +6,31 @@
 
 # Broken Access Control
 
-Websites have pages that are protected from regular visitors. For example, only the site's admin user should be able to access a page to manage other users. If a website visitor can access protected pages they are not meant to see, then the access controls are broken.
+Broken Access Control occurs when users can perform actions beyond their intended permissions. This can lead to unauthorized access to sensitive data, modification of user data, or even administrative actions without proper authorization. Ensuring robust access controls is vital to maintaining the security and integrity of applications.
 
-A regular visitor being able to access protected pages can lead to the following:
+Key Points:
 
-Being able to view sensitive information from other users
-Accessing unauthorized functionality
-Simply put, broken access control allows attackers to bypass authorisation, allowing them to view sensitive data or perform tasks they aren't supposed to.
+* Unauthorized Access: Users gaining access to data or functions they should not be able to.
 
-For example, a vulnerability was found in 2019, where an attacker could get any single frame from a Youtube video marked as private. The researcher who found the vulnerability showed that he could ask for several frames and somewhat reconstruct the video. Since the expectation from a user when marking a video as private would be that nobody had access to it, this was indeed accepted as a broken access control vulnerability.
+* Privilege Escalation: Attackers gaining higher privileges than intended, potentially compromising the system.
+
+* Insecure Direct Object References (IDOR): Accessing unauthorized resources through manipulated URLs or identifiers.
+
+* Access Control Misconfiguration: Incorrect implementation or configuration of access control mechanisms.
+
+Mitigation Strategies:
+
+* Implement Principle of Least Privilege: Ensure users have the minimum level of access necessary to perform their tasks.
+
+* Regular Access Control Reviews: Periodically review and update access controls to ensure they are correctly applied.
+
+* Use Secure Access Control Mechanisms: Implement robust access control mechanisms such as role-based access control (RBAC) and attribute-based access control (ABAC).
+
+* Conduct Regular Audits: Regularly audit access logs and permissions to detect and address potential security issues.
+
+* Broken Access Control highlights the need for meticulous implementation and regular review of access control measures to prevent unauthorized actions and protect sensitive data.
+
+
 **Question:**
 
 ![image](https://github.com/user-attachments/assets/e1adbc04-4d1c-4c1b-8393-5c45f9fa6d87)
@@ -22,20 +38,41 @@ For example, a vulnerability was found in 2019, where an attacker could get any 
 **Question 1:** <code>**Question 1:** <code> Try to reset joseph's password. Keep in mind the method used by the site to validate if you are indeed joseph. </code><br>
 **Answer:** No Need to Answer</code><br>
 
+**Broken Access Control (IDOR Challenge**
+![image](https://github.com/user-attachments/assets/fa5aacf4-514b-4fdb-ae4d-a20c592917ad)
+
+**Question 1:** <code>**Question 1:** <code> Read and understand how IDOR works. </code><br>
+**Answer:** No Need to Answer
+
+**Question 1:** <code>**Question 2:** <code> Deploy the machine and go to http://MACHINE_IP - Login with the username noot and the password test1234. </code><br>
+**Answer:** No Need to Answer
+
+**Question 3:** <code>**Question 2:** <code> Look at other users' notes. What is the flag? </code><br>
+**Answer:** <code>flag{fivefourthree}</code><br>
+
 # Cryptographic Failures
 
+Cryptographic Failures refer to the improper implementation or use of cryptographic algorithms and protocols, which can lead to the exposure of sensitive data. These failures are critical because they undermine the integrity, confidentiality, and authenticity of data. Common issues include weak encryption algorithms, poor key management practices, and the improper handling of cryptographic processes.
 
-A cryptographic failure refers to any vulnerability arising from the misuse (or lack of use) of cryptographic algorithms for protecting sensitive information. Web applications require cryptography to provide confidentiality for their users at many levels.
+Key Points:
 
-Take, for example, a secure email application:
+* Weak Algorithms: Using outdated or weak encryption algorithms that can be easily broken by attackers.
+* 
+* Improper Key Management: Failing to securely generate, store, and manage cryptographic keys, leading to potential unauthorized access.
+* Insufficient Protection: Not adequately protecting sensitive data during transmission and storage, making it vulnerable to interception and theft.
+* Misuse of Cryptographic Functions: Incorrectly using cryptographic functions, such as failing to use salt with hashing algorithms or not using encryption when needed.
+Mitigation Strategies:
 
-When you are accessing your email account using your browser, you want to be sure that the communications between you and the server are encrypted. That way, any eavesdropper trying to capture your network packets won't be able to recover the content of your email addresses. When we encrypt the network traffic between the client and server, we usually refer to this as encrypting data in transit.
-Since your emails are stored in some server managed by your provider, it is also desirable that the email provider can't read their client's emails. To this end, your emails might also be encrypted when stored on the servers. This is referred to as encrypting data at rest.
-Cryptographic failures often end up in web apps accidentally divulging sensitive data. This is often data directly linked to customers (e.g. names, dates of birth, financial information), but it could also be more technical information, such as usernames and passwords.
+* Use Strong Encryption: Implement strong, industry-standard encryption algorithms to protect sensitive data.
 
-At more complex levels, taking advantage of some cryptographic failures often involves techniques such as "Man in The Middle Attacks", whereby the attacker would force user connections through a device they control. Then, they would take advantage of weak encryption on any transmitted data to access the intercepted information (if the data is even encrypted in the first place). Of course, many examples are much simpler, and vulnerabilities can be found in web apps that can be exploited without advanced networking knowledge. Indeed, in some cases, the sensitive data can be found directly on the web server itself.
+* Key Management Best Practices: Follow best practices for key management, including secure generation, storage, and rotation of cryptographic keys.
 
-The web application in this box contains one such vulnerability. To continue, read through the supporting material in the following tasks.
+* Protect Data in Transit and at Rest: Ensure that sensitive data is encrypted both during transmission and when stored, using robust cryptographic protocols.
+
+* Regular Audits and Updates: Conduct regular security audits and updates to ensure that cryptographic implementations remain secure and up-to-date with current standards.
+
+* Cryptographic Failures underscore the importance of properly implementing and managing cryptographic mechanisms to ensure the security and privacy of data within applications.
+
 
 **Question:**
 ![image](https://github.com/user-attachments/assets/7b29bacb-593a-403f-9a39-f109cdc020ce)
@@ -265,23 +302,23 @@ Mitigation Strategies:
 
 ![image](https://github.com/user-attachments/assets/8906bfdf-26bf-4024-b7bd-d8de9b07f58f)
 
-**Question 1:**<code>What is the SHA-256 hash of (https://code.jquery.com/jquery-1.12.4.min.js?)</code><br>
+**Question 2:**<code>What is the SHA-256 hash of (https://code.jquery.com/jquery-1.12.4.min.js?)</code><br>
 **Answer:** <code>sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=</code>
 
 **Data Integrity Failures**
 ![image](https://github.com/user-attachments/assets/0b5d6d4f-abbb-4930-8680-1a784c039b13)
-**Question 1:**<code>Try logging into the application as guest. What is guest's account password?</code><br>
+**Question 3:**<code>Try logging into the application as guest. What is guest's account password?</code><br>
 **Answer:** <code>guest</code>
 
 ![image](https://github.com/user-attachments/assets/cb89d466-714c-41ba-a9f2-2baeede6d71b)
 
-**Question 2:**<code>What is the name of the website's cookie containing a JWT token?</code><br>
+**Question 4:**<code>What is the name of the website's cookie containing a JWT token?</code><br>
 **Answer:** <code>jwt-session</code>
 
-**Question 2:**<code>Use the knowledge gained in this task to modify the JWT token so that the application thinks you are the user "admin".</code><br>
+**Question 5:**<code>Use the knowledge gained in this task to modify the JWT token so that the application thinks you are the user "admin".</code><br>
 **Answer:** No Need To Answer
 
-**Question 2:**<code>What is the flag presented to the admin user?</code><br>
+**Question 6:**<code>What is the flag presented to the admin user?</code><br>
 **Answer:** <code>THM{Dont_take_cookies_from_strangers}</code>
 
 
@@ -314,7 +351,7 @@ Mitigation Strategies:
 
 ![image](https://github.com/user-attachments/assets/3da7d50b-2e0a-4ecf-a324-ccb3c4689eb0)
 
-**Question 2:**<code>What IP address is the attacker using?</code><br>
+**Question 1:**<code>What IP address is the attacker using?</code><br>
 **Answer:** <code>49.99.13.16</code>
 
 **Question 2:**<code>What kind of attack is being carried out?</code><br>
@@ -358,6 +395,6 @@ Mitigation Strategies:
 **Question 3:**<code>Using SSRF, make the application send the request to your AttackBox instead of the secure file storage. Are there any API keys in the intercepted request?</code><br>
 **Answer:** <code>THM{Hello_Im_just_an_API_key}</code>
 
-**Question 2:**<code>Going the Extra Mile: There's a way to use SSRF to gain access to the site's admin area. Can you find it? </code><br>
-**note:**You won't need this flag to progress in the room. You are expected to do some research in order to achieve your goal.
+**Question 4:**<code>Going the Extra Mile: There's a way to use SSRF to gain access to the site's admin area. Can you find it? </code><br>
+**note:** You won't need this flag to progress in the room. You are expected to do some research in order to achieve your goal.
 **Answer:** No Need To Answer

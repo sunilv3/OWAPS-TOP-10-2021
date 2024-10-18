@@ -38,17 +38,10 @@ Mitigation Strategies:
 **Question 1:** <code>**Question 1:** <code> Try to reset joseph's password. Keep in mind the method used by the site to validate if you are indeed joseph. </code><br>
 **Answer:** No Need to Answer</code><br>
 
-**Broken Access Control (IDOR Challenge**
+**Broken Access Control (IDOR Challenge**)
 ![image](https://github.com/user-attachments/assets/fa5aacf4-514b-4fdb-ae4d-a20c592917ad)
 
-**Question 1:** <code>**Question 1:** <code> Read and understand how IDOR works. </code><br>
-**Answer:** No Need to Answer
 
-**Question 1:** <code>**Question 2:** <code> Deploy the machine and go to http://MACHINE_IP - Login with the username noot and the password test1234. </code><br>
-**Answer:** No Need to Answer
-
-**Question 3:** <code>**Question 2:** <code> Look at other users' notes. What is the flag? </code><br>
-**Answer:** <code>flag{fivefourthree}</code><br>
 
 # Cryptographic Failures
 

@@ -57,7 +57,7 @@ Cryptographic Failures refer to the improper implementation or use of cryptograp
 Key Points:
 
 * Weak Algorithms: Using outdated or weak encryption algorithms that can be easily broken by attackers.
-* 
+
 * Improper Key Management: Failing to securely generate, store, and manage cryptographic keys, leading to potential unauthorized access.
 * Insufficient Protection: Not adequately protecting sensitive data during transmission and storage, making it vulnerable to interception and theft.
 * Misuse of Cryptographic Functions: Incorrectly using cryptographic functions, such as failing to use salt with hashing algorithms or not using encryption when needed.
